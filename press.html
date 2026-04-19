@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Press kit — Grocery Routes</title>
+<meta name="description" content="Press kit for Grocery Routes — boilerplate, founder quotes, product facts, and assets for journalists, bloggers, and AI search engines." />
+<link rel="canonical" href="https://groceryroutes.app/press.html" />
+<style>/* Grocery Routes — base styles */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #0A0A0B;
+  --bg-2: #111113;
+  --bg-3: #1A1A1D;
+  --fg: #FAFAF7;
+  --fg-2: #A8A8A3;
+  --fg-3: #6E6E69;
+  --line: #222225;
+  --green: #30D158;        /* Apple systemGreen */
+  --green-ink: #0A3D1C;
+  --red: #FF453A;          /* Apple systemRed */
+  --blue: #0A84FF;          /* Apple systemBlue */
+  --orange: #FF9F0A;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --max: 1240px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Instrument Serif", "Times New Roman", Times, serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+body.light {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: 0.75; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 { margin: 0; font-weight: 500; letter-spacing: -0.02em; }
+p { margin: 0; text-wrap: pretty; }
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(56px, 9vw, 148px);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+.display em { font-style: italic; color: var(--green); }
+
+.h1 {
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+.h1 .serif { font-family: var(--font-serif); font-weight: 400; font-style: italic; letter-spacing: -0.02em; }
+
+.h2 {
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-weight: 500;
+}
+
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.lede {
+  font-size: clamp(19px, 1.6vw, 22px);
+  line-height: 1.45;
+  color: var(--fg-2);
+  max-width: 58ch;
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10,10,11,0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+.logo-mark {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: var(--green);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.logo-mark::after {
+  content: "";
+  width: 10px; height: 10px;
+  border: 1.8px solid var(--green-ink);
+  border-radius: 2px;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--fg-2);
+}
+.nav ul a:hover { color: var(--fg); opacity: 1; }
+.nav-cta {
+  background: var(--fg);
+  color: var(--bg);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform .15s ease;
+}
+.nav-cta:hover { transform: translateY(-1px); opacity: 1; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition: transform .15s ease, background .2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--green); color: var(--green-ink); }
+.btn-primary:hover { transform: translateY(-1px); opacity: 1; }
+.btn-ghost { color: var(--fg); border: 1px solid var(--line); background: transparent; }
+.btn-ghost:hover { border-color: var(--fg-2); opacity: 1; }
+.btn-light { background: var(--fg); color: var(--bg); }
+.btn-dark { background: var(--bg); color: var(--fg); }
+
+/* Sections */
+section { padding: 120px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 720px) { section { padding: 72px 0; } }
+section.light { background: var(--fg); color: var(--bg); border-color: #E6E6DE; }
+section.light .eyebrow { color: #6E6E69; }
+section.light .lede { color: #3A3A35; }
+
+/* Receipt/list motif */
+.receipt {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--fg-2);
+}
+.receipt .row { display: flex; justify-content: space-between; padding: 6px 0; }
+.receipt .row.total { color: var(--fg); border-top: 1px dashed var(--line); margin-top: 8px; padding-top: 12px; }
+.receipt .row.savings { color: var(--green); }
+
+/* Grid helpers */
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 880px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Footer */
+footer {
+  padding: 72px 0 48px;
+  color: var(--fg-3);
+  font-size: 14px;
+}
+footer .row1 { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+footer h5 { font-size: 13px; color: var(--fg); margin-bottom: 14px; font-weight: 500; }
+footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+footer ul a:hover { color: var(--fg); opacity: 1; }
+footer .legal { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 12px; }
+
+/* Utilities */
+.stack-sm > * + * { margin-top: 12px; }
+.stack > * + * { margin-top: 20px; }
+.stack-lg > * + * { margin-top: 40px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+.tag .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 3px rgba(48,209,88,0.15); }
+
+/* Placeholder image */
+.placeholder {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,0.03) 14px 15px),
+    var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  min-height: 200px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* Tweaks panel */
+#tweaks-btn {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 100;
+  display: none;
+}
+body.tweaks-on #tweaks-panel { display: block; }
+#tweaks-panel {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 100;
+  width: 260px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  color: var(--fg);
+  font-size: 13px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+#tweaks-panel h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-3); margin-bottom: 12px; font-weight: 500; font-family: var(--font-mono); }
+#tweaks-panel .opt { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; }
+#tweaks-panel .opt:hover { background: var(--bg-3); }
+#tweaks-panel .opt.active { border-color: var(--green); }
+#tweaks-panel .opt input { accent-color: var(--green); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span><span>Grocery Routes</span></a>
+    <ul><li><a href="how-it-works.html">How it works</a></li><li><a href="stores.html">Stores</a></li><li><a href="journal/index.html">Journal</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul>
+    <a class="nav-cta" href="https://apps.apple.com/us/app/grocery-routes/id6759638045" target="_blank" rel="noopener">Download</a>
+  </div>
+</nav>
+
+<section style="padding: 96px 0 48px; border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <span class="eyebrow">Press kit</span>
+    <h1 class="display" style="margin-top: 24px;">Facts,<br/>not hype.</h1>
+    <p class="lede" style="margin-top: 28px;">Everything a journalist, blogger, or AI assistant needs to cover Grocery Routes accurately.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="press-grid">
+      <div>
+        <h2 class="h2">Boilerplate</h2>
+        <p class="press-text">Grocery Routes is an iOS app that compares every item on a shopper's grocery list across the stores they shop at, and returns the single cheapest multi-store trip. Launched in January 2026 and built independently out of Ventura County, California. Typical users save $100+ per 70-item list. Free, with nationwide expansion targeted for early 2027.</p>
+      </div>
+      <div>
+        <h2 class="h2">At a glance</h2>
+        <dl class="facts">
+          <dt>Product</dt><dd>Grocery Routes — iOS grocery price comparison app</dd>
+          <dt>Platform</dt><dd>iOS (iPhone). Android on roadmap.</dd>
+          <dt>Pricing</dt><dd>Free (freemium with ads planned)</dd>
+          <dt>Launched</dt><dd>January 2026</dd>
+          <dt>HQ</dt><dd>Ventura County, California</dd>
+          <dt>Founder</dt><dd>Solo founder — available for interviews</dd>
+          <dt>Stores</dt><dd>Aldi, Trader Joe's, Ralphs, Vons, Sprouts, Walmart (LA beta)</dd>
+          <dt>Coverage</dt><dd>Ventura County + Los Angeles County, CA</dd>
+          <dt>Avg. savings</dt><dd>$100+ on a 70-item list</dd>
+          <dt>App Store</dt><dd><a href="https://apps.apple.com/us/app/grocery-routes/id6759638045" target="_blank" rel="noopener" style="color: var(--green);">apps.apple.com/us/app/grocery-routes</a></dd>
+          <dt>Contact</dt><dd><a href="mailto:groceryroutes@gmail.com" style="color: var(--green);">groceryroutes@gmail.com</a></dd>
+          <dt>Social</dt><dd>Instagram <a href="https://instagram.com/groceryroutes" target="_blank" rel="noopener" style="color: var(--green);">@groceryroutes</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="container">
+    <span class="eyebrow">Pull quotes</span>
+    <h2 class="h1" style="margin-top: 16px;">On the record.</h2>
+    <div class="pulls">
+      <blockquote><p>"I grew up here. I know what it’s like to watch your cart total climb and just hope for the best at checkout. I built GroceryRoutes because nobody should have to guess which store is cheaper — especially when a few miles can mean $20 back in your pocket.”</p><footer>— Founder, Grocery Routes</footer></blockquote>
+      <blockquote><p>"I’m not a big company. I’m one person from Ventura County who wanted to make something useful for the people around me. If this app saves a family in Oxnard or Camarillo $30 a week, that’s the whole point.”</p><footer>— Founder, Grocery Routes</footer></blockquote>
+      <blockquote><p>"I built this without a team, without funding, and without a background in tech. I built it because I needed it, and I figured if I needed it, my neighbors probably did too."</p><footer>— Founder, Grocery Routes</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="eyebrow">Assets</span>
+    <h2 class="h1" style="margin-top: 16px;">Downloads.</h2>
+    <div class="assets-grid">
+      <div class="asset-card"><div class="placeholder" style="min-height: 160px;">App icon · PNG/SVG</div><div class="asset-meta">Logo — full color &amp; mono</div></div>
+      <div class="asset-card"><div class="placeholder" style="min-height: 160px;">Product screenshots · ZIP</div><div class="asset-meta">6 app screenshots @ 3x</div></div>
+      <div class="asset-card"><div class="placeholder" style="min-height: 160px;">Founder headshot</div><div class="asset-meta">1600×1600 · hi-res</div></div>
+      <div class="asset-card"><div class="placeholder" style="min-height: 160px;">Fact sheet · PDF</div><div class="asset-meta">One-page summary</div></div>
+    </div>
+    <p class="mono" style="color: var(--fg-3); font-size: 12px; letter-spacing: 0.1em; margin-top: 28px;">NEED SOMETHING NOT LISTED? EMAIL GROCERYROUTES@GMAIL.COM — REPLIES IN UNDER 24H.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row1">
+      <div style="max-width: 320px;"><a href="index.html" class="logo" style="color: var(--fg); margin-bottom: 14px;"><span class="logo-mark"></span><span>Grocery Routes</span></a><p style="margin-top: 14px; color: var(--fg-3); font-size: 13px;">The item-by-item grocery price comparison app. Built in Ventura County, CA.</p></div>
+      <div><h5>Product</h5><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="stores.html">Supported stores</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="changelog.html">Changelog</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="journal/index.html">Journal</a></li><li><a href="press.html">Press kit</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li><a href="mailto:groceryroutes@gmail.com">groceryroutes@gmail.com</a></li><li><a href="https://instagram.com/groceryroutes" target="_blank">Instagram</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Grocery Routes. All rights reserved.</span><span class="mono">v1.0 · Ventura County, CA</span></div>
+  </div>
+</footer>
+
+<style>
+.press-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.press-text { color: var(--fg-2); font-size: 17px; line-height: 1.6; max-width: 48ch; }
+.facts { margin: 16px 0 0; display: grid; grid-template-columns: 140px 1fr; gap: 10px 24px; font-size: 14px; }
+.facts dt { color: var(--fg-3); font-family: var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; padding-top: 4px; }
+.facts dd { margin: 0; color: var(--fg); }
+.pulls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.pulls blockquote { margin: 0; padding: 28px; background: var(--fg); border: 1px solid #E6E6DE; border-radius: 16px; color: var(--bg); }
+.pulls p { font-family: var(--font-serif); font-size: 22px; font-style: italic; line-height: 1.3; letter-spacing: -0.01em; }
+.pulls footer { color: #6E6E69; font-size: 13px; margin-top: 14px; font-family: var(--font-mono); letter-spacing: 0.04em; }
+.assets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.asset-card { cursor: pointer; }
+.asset-card:hover .placeholder { border-color: var(--green); }
+.asset-meta { font-size: 13px; color: var(--fg-2); margin-top: 12px; font-family: var(--font-mono); letter-spacing: 0.02em; }
+@media (max-width: 880px) { .press-grid, .pulls, .assets-grid { grid-template-columns: 1fr; } }
+</style>
+<script>// Shared JS — nav behavior + edit mode (tweaks)
+
+(function() {
+  // Edit mode availability
+  let editModeActive = false;
+  window.addEventListener('message', (e) => {
+    if (!e.data || !e.data.type) return;
+    if (e.data.type === '__activate_edit_mode') {
+      editModeActive = true;
+      document.body.classList.add('tweaks-on');
+      const p = document.getElementById('tweaks-panel');
+      if (p) p.style.display = 'block';
+    }
+    if (e.data.type === '__deactivate_edit_mode') {
+      editModeActive = false;
+      document.body.classList.remove('tweaks-on');
+      const p = document.getElementById('tweaks-panel');
+      if (p) p.style.display = 'none';
+    }
+  });
+  try {
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
